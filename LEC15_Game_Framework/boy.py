@@ -50,6 +50,13 @@ class Boy:
     def on_enter_RUN(self):
         self.frame = 0
 
+    def reset_input(self):
+        # 다른 모드에 있는 동안 놓친 키 입력 때문에 계속 달리는 것을 막는다.
+        self.pressed_keys.clear()
+        self.dir = 0
+        if self.state == 'RUN':
+            self.stop_run()
+
     def set_ball_mode(self, mode):
         if mode in (BALL_NONE, BALL_SMALL, BALL_BIG):
             self.ball_mode = mode
