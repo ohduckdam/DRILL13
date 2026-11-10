@@ -21,10 +21,12 @@ class Ball:
         self.image = Ball.images[size]
         self.x, self.y = x, y
         self.velocity = velocity
+        self.radius = self.image.w // 2
 
     def update(self):
         self.x += self.velocity
-        if self.x < 0 or self.x > get_canvas_width():
+        if (self.x < -self.radius or
+                self.x > get_canvas_width() + self.radius):
             game_world.remove_object(self)
 
     def draw(self):
