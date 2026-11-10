@@ -55,6 +55,8 @@ class Boy:
             self.ball_mode = mode
 
     def fire_ball(self):
+        if self.ball_mode == BALL_NONE:
+            return
         ball = Ball(self.x, self.y, self.face_dir * 10)
         game_world.add_object(ball)
 
