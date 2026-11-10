@@ -29,10 +29,10 @@ def init():
 
     game_world.clear()
     grass = Grass()
-    game_world.add_oject(grass, 0)
+    game_world.add_object(grass, 0)
 
     boy = Boy()
-    game_world.add_oject(boy, 1)
+    game_world.add_object(boy, 1)
 
 def update_world():
     game_world.update()
