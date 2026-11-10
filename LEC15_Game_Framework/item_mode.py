@@ -44,6 +44,7 @@ def handle_events():
         if event.type == SDL_KEYDOWN and event.key in (SDLK_ESCAPE, SDLK_i):
             game_framework.pop_mode()  # 선택 없이 play_mode로 복귀
             return
+        play_mode.boy.handle_event(event)  # 이동/발사 입력은 그대로 소년에게 전달
 
 
 def update():
