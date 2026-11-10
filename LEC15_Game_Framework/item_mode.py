@@ -22,7 +22,13 @@ def finish():
 
 
 def handle_events():
-    get_events()
+    for event in get_events():
+        if event.type == SDL_QUIT:
+            game_framework.quit()
+            return
+        if event.type == SDL_KEYDOWN and event.key in (SDLK_ESCAPE, SDLK_i):
+            game_framework.pop_mode()  # 선택 없이 play_mode로 복귀
+            return
 
 
 def update():
