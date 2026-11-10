@@ -63,4 +63,4 @@ def pause():
 
 
 def resume():
-    boy.reset_input()
+    pass
