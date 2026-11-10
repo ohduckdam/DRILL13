@@ -7,7 +7,7 @@ from sdl2 import (SDL_KEYDOWN, SDL_KEYUP, SDLK_LEFT, SDLK_RIGHT,
 from transitions import Machine
 
 import game_world
-from ball import Ball
+from ball import BALL_BIG, BALL_NONE, BALL_SMALL, Ball
 
 
 class Boy:
@@ -21,6 +21,7 @@ class Boy:
         self.dir = 0
         self.face_dir = 1
         self.pressed_keys = set()
+        self.ball_mode = BALL_SMALL
 
         self.machine = Machine(
             model=self,
