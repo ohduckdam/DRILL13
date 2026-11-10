@@ -50,6 +50,10 @@ class Boy:
     def on_enter_RUN(self):
         self.frame = 0
 
+    def set_ball_mode(self, mode):
+        if mode in (BALL_NONE, BALL_SMALL, BALL_BIG):
+            self.ball_mode = mode
+
     def fire_ball(self):
         ball = Ball(self.x, self.y, self.face_dir * 10)
         game_world.add_object(ball)
