@@ -6,6 +6,7 @@ import game_world
 
 BALL_IMAGE_FILES = {
     'small': 'ball21x21.png',
+    'big': 'ball41x41.png',
 }
 
 
