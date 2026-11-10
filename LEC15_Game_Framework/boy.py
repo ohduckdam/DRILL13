@@ -57,7 +57,8 @@ class Boy:
     def fire_ball(self):
         if self.ball_mode == BALL_NONE:
             return
-        ball = Ball(self.x, self.y, self.face_dir * 10)
+        size = 'big' if self.ball_mode == BALL_BIG else 'small'
+        ball = Ball(self.x, self.y, self.face_dir * 10, size)
         game_world.add_object(ball)
 
     def handle_event(self, event):
