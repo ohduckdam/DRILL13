@@ -13,6 +13,9 @@ KEY_TO_BALL_MODE = {
     SDLK_0: BALL_NONE,   # 공 없음
     SDLK_1: BALL_SMALL,  # 작은 공
     SDLK_2: BALL_BIG,    # 큰 공
+    SDLK_KP_0: BALL_NONE,  # 숫자 키패드도 지원
+    SDLK_KP_1: BALL_SMALL,
+    SDLK_KP_2: BALL_BIG,
 }
 
 
