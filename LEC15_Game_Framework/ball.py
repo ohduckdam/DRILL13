@@ -4,6 +4,11 @@ from pico2d import get_canvas_width, load_image
 
 import game_world
 
+# 아이템 모드에서 선택하는 공 모드
+BALL_NONE = 0   # 공 없음
+BALL_SMALL = 1  # 작은 공 (기본)
+BALL_BIG = 2    # 큰 공
+
 BALL_IMAGE_FILES = {
     'small': 'ball21x21.png',
     'big': 'ball41x41.png',
