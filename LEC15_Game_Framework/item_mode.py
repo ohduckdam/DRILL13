@@ -47,12 +47,12 @@ def handle_events():
 
 
 def update():
-    pass  # 월드를 업데이트하지 않음 → 게임 정지
+    game_world.update()  # 아이템 창이 떠 있어도 게임은 계속 진행
 
 
 def render():
     clear_canvas()
-    game_world.render()  # 멈춘 게임 화면을 그대로 그림
+    game_world.render()  # 진행 중인 게임 화면을 그림
     image.draw(get_canvas_width() // 2, get_canvas_height() // 2)
     update_canvas()
 
