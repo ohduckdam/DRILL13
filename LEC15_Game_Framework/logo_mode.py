@@ -35,3 +35,11 @@ def handle_events():
     for event in events:
         if event.type == SDL_QUIT:
             game_framework.quit()
+
+
+def pause():
+    pass
+
+
+def resume():
+    pass
